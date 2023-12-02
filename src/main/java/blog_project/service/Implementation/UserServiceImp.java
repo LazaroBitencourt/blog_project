@@ -21,7 +21,7 @@ public class UserServiceImp implements UserService {
     @Override
     public Iterable<User> findAll() {
         List<User> users = userRepository.findAll();
-        if(users.isEmpty()){
+        if(users == null || users.isEmpty()){
             throw new EntityNotFoundException("No users were found.");
         }
         return users;
@@ -30,10 +30,10 @@ public class UserServiceImp implements UserService {
     @Override
     public User findById(Long id) {
         if (id == null || id <= 0) {
-            throw new IllegalArgumentException("Invalid user ID");
+            throw new IllegalArgumentException("Invalid user ID.");
         }
         return userRepository.findById(id).orElseThrow(()->
-                new EntityNotFoundException("This user was not found. UserID: " + id));
+                new EntityNotFoundException("This user was not found. User ID: " + id));
     }
 
     @Override
@@ -48,9 +48,10 @@ public class UserServiceImp implements UserService {
     @Override
     public void updateUser(Long id, User user) {
         if (id == null || id <= 0) {
-            throw new IllegalArgumentException("Invalid user ID");
+            throw new IllegalArgumentException("Invalid user ID.");
         }
-        User foundUser = userRepository.findById(id).orElseThrow(()-> new EntityNotFoundException("This user was not found. UserID: " + id));
+        User foundUser = userRepository.findById(id).orElseThrow(()->
+                new EntityNotFoundException("This user was not found. User ID: " + id));
         BeanUtils.copyProperties(user, foundUser, "id");
         userRepository.save(foundUser);
     }
@@ -58,7 +59,7 @@ public class UserServiceImp implements UserService {
     @Override
     public void deleteUser(Long id) {
         if (id == null || id <= 0) {
-            throw new IllegalArgumentException("Invalid user ID");
+            throw new IllegalArgumentException("Invalid user ID.");
         }
         userRepository.deleteById(id);
     }

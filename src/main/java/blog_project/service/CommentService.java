@@ -1,7 +1,6 @@
 package blog_project.service;
 
 import blog_project.model.Comment;
-import blog_project.model.User;
 
 public interface CommentService {
 
@@ -9,9 +8,9 @@ public interface CommentService {
 
     Comment findById(Long id);
 
-    void createComment(User user);
+    Comment createComment(Comment comment);
 
-    void updateComment(Long id, User user);
+    void updateComment(Long id, Comment commet);
 
     void deleteComment(Long id);
 }

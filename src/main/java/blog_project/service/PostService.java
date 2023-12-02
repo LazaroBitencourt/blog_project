@@ -1,7 +1,6 @@
 package blog_project.service;
 
 import blog_project.model.Post;
-import blog_project.model.User;
 
 public interface PostService {
 
@@ -9,9 +8,12 @@ public interface PostService {
 
     Post findById(Long id);
 
-    void createPost(User user);
+    Post createPost(Post post);
 
-    void updatePost(Long id, User user);
+    void updatePost(Long id, Post post);
 
     void deletePost(Long id);
+
+    Iterable<Post> findPostsByKeyword(String keyword);
+
 }
