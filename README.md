@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto - Blog API
 
-O projeto "Blog API" é uma aplicação Java que fornece uma API para gerenciar um blog online. Ele é projetado para lidar com usuários, postagens e comentários, permitindo interações dinâmicas em um ambiente de blog colaborativo. Abaixo estão as principais entidades e funcionalidades do projeto:
+O projeto "Blog API" é uma aplicação Java que fornece uma API RESTful para gerenciar um blog online. Ele é projetado para lidar com usuários, postagens e comentários, permitindo interações dinâmicas em um ambiente de blog colaborativo. Abaixo estão as principais entidades e funcionalidades do projeto:
 
 ## Entidades Principais
 
