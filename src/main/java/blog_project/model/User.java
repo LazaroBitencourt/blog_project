@@ -1,15 +1,15 @@
 package blog_project.model;
 
 import jakarta.persistence.*;
-
 import java.util.List;
+
 @Entity(name = "tab_user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true, nullable = false) // TO DO faça o tratamento para exceção que será lançada se não adicionar
-    private String username;                 // os dados em NAME e PASSWORD.
+    @Column(unique = true, nullable = false)
+    private String username;
     @Column(unique = true, nullable = false)
     private String password;
     @Column(name ="user_posts")

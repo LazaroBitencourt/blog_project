@@ -72,7 +72,6 @@ public class PostServiceImp implements PostService {
         if (posts == null || posts.isEmpty()) {
             throw new EntityNotFoundException("No posts were found.");
         }
-
         return posts;
     }
 

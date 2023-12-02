@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 
-@RestController
+    @RestController
     @RequestMapping("/users")
     public class UserRestController {
 
@@ -26,18 +26,18 @@ import java.net.URI;
             return ResponseEntity.ok(userService.findAll());
         }
         @PostMapping
-        public ResponseEntity<User> userCreate(@RequestBody User userToCreate) {
+        public ResponseEntity<User> createUser(@RequestBody User userToCreate) {
             var userCreated = userService.createUser(userToCreate);
             URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(userCreated.getId()).toUri();
             return ResponseEntity.created(location).body(userCreated);
         }
         @PutMapping("/{id}")
-        public ResponseEntity<User> userUpdate(@PathVariable Long id,@RequestBody User userUpdate){
+        public ResponseEntity<User> updateUser(@PathVariable Long id,@RequestBody User userUpdate){
             userService.updateUser(id, userUpdate);
         return ResponseEntity.ok(userUpdate);
         }
         @DeleteMapping("/{id}")
-        public ResponseEntity<Void> userDelete(@PathVariable Long id) {
+        public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
             userService.deleteUser(id);
             return ResponseEntity.ok().build();
         }

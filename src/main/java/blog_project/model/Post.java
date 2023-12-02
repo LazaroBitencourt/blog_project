@@ -1,7 +1,6 @@
 package blog_project.model;
 
 import jakarta.persistence.*;
-
 import java.util.Date;
 import java.util.List;
 
@@ -10,7 +9,7 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)  // TO DO faça o tratamento de exceção para caso o TITLE e o AUTHOR serem nulos.
+    @Column(nullable = false)
     private String title;
     private String content;
     @Column(nullable = false)
