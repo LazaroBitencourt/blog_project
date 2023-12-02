@@ -1,7 +1,7 @@
-package blog_project.controller;
+package blog_project.domain.controller;
 
-import blog_project.model.Post;
-import blog_project.service.PostService;
+import blog_project.domain.model.Post;
+import blog_project.domain.service.PostService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;

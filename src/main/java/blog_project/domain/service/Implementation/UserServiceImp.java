@@ -1,8 +1,8 @@
-package blog_project.service.Implementation;
+package blog_project.domain.service.Implementation;
 
-import blog_project.model.User;
-import blog_project.repository.UserRepository;
-import blog_project.service.UserService;
+import blog_project.domain.service.UserService;
+import blog_project.domain.model.User;
+import blog_project.domain.repository.UserRepository;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.BeanUtils;

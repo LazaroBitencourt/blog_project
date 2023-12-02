@@ -1,7 +1,7 @@
-package blog_project.controller;
+package blog_project.domain.controller;
 
-import blog_project.model.Comment;
-import blog_project.service.CommentService;
+import blog_project.domain.model.Comment;
+import blog_project.domain.service.CommentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -11,7 +11,7 @@ import java.net.URI;
 public class CommentRestController {
     private final CommentService commentService;
 
-    public CommentRestController(blog_project.service.CommentService commentService) {
+    public CommentRestController(CommentService commentService) {
         this.commentService = commentService;
     }
 

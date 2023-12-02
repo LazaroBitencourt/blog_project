@@ -1,8 +1,8 @@
-package blog_project.service.Implementation;
+package blog_project.domain.service.Implementation;
 
-import blog_project.model.Comment;
-import blog_project.repository.CommentRepository;
-import blog_project.service.CommentService;
+import blog_project.domain.model.Comment;
+import blog_project.domain.repository.CommentRepository;
+import blog_project.domain.service.CommentService;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.BeanUtils;

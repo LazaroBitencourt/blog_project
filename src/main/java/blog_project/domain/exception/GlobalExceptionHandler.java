@@ -1,4 +1,4 @@
-package blog_project.exception;
+package blog_project.domain.exception;
 
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
@@ -18,6 +18,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleBusinessException(IllegalAccessException businessException) {
         return new ResponseEntity<>(businessException.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
     }
+
     @ExceptionHandler(EntityExistsException.class)
     public ResponseEntity<String> handleBusinessException(EntityExistsException businessException) {
         return new ResponseEntity<>(businessException.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);

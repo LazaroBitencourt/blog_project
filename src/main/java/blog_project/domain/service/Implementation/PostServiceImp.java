@@ -1,8 +1,8 @@
-package blog_project.service.Implementation;
+package blog_project.domain.service.Implementation;
 
-import blog_project.model.Post;
-import blog_project.repository.PostRepository;
-import blog_project.service.PostService;
+import blog_project.domain.model.Post;
+import blog_project.domain.service.PostService;
+import blog_project.domain.repository.PostRepository;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.BeanUtils;

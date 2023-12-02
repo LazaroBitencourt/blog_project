@@ -1,6 +1,6 @@
-package blog_project.service;
+package blog_project.domain.service;
 
-import blog_project.model.Comment;
+import blog_project.domain.model.Comment;
 
 public interface CommentService {
 

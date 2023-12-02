@@ -1,6 +1,6 @@
-package blog_project.service;
+package blog_project.domain.service;
 
-import blog_project.model.User;
+import blog_project.domain.model.User;
 
 public interface UserService{
 

@@ -1,4 +1,4 @@
-package blog_project.model;
+package blog_project.domain.model;
 
 import jakarta.persistence.*;
 import java.util.Date;
@@ -32,6 +32,9 @@ public class Post {
     }
 
     public void setTitle(String title) {
+        if(title == null){
+            throw new IllegalArgumentException("The TITLE field is empty; please fill it completely.");
+        }
         this.title = title;
     }
 
@@ -48,6 +51,9 @@ public class Post {
     }
 
     public void setAuthor(User author) {
+        if(author == null){
+            throw new IllegalArgumentException("The AUTHOR field is empty; please fill it completely.");
+        }
         this.author = author;
     }
 

@@ -1,4 +1,4 @@
-package blog_project.model;
+package blog_project.domain.model;
 
 import jakarta.persistence.*;
 import java.util.List;
@@ -32,6 +32,9 @@ public class User {
     }
 
     public void setUsername(String username) {
+        if(username == null){
+            throw new IllegalArgumentException("The USERNAME field is empty; please fill it completely.");
+        }
         this.username = username;
     }
 
@@ -40,6 +43,9 @@ public class User {
     }
 
     public void setPassword(String password) {
+        if(password == null){
+            throw new IllegalArgumentException("The PASSWORD field is empty; please fill it completely.");
+        }
         this.password = password;
     }
 
